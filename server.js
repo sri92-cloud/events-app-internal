@@ -85,8 +85,7 @@ app.post('/event', (req, res) => {
     // create a new object from the json data and add an id
     const ev = { 
         title: req.body.title, 
-        description: req.body.description,
-        id : mockEvents.events.length + 1
+        description: req.body.description
      }
 // this will create the Events collection if it does not exist
     firestore.collection("Events").add(ev).then(ret => {
